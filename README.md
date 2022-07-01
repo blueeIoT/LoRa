@@ -6,7 +6,7 @@ Descarga la librería y conecta tus proyectos a redes LoRa y a diversas platafor
 
 Visita http://wwww.bluee.com.mx para más información.
 
-- Librería para *BlueeLoRa*
+- Librería para el dispositivo *BlueeLoRa* basado en el chip RFM95W.
 - Basada en la librería de Arduino [LoRa]
 
 # Inicialización
