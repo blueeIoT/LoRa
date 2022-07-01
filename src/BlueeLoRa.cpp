@@ -175,8 +175,8 @@ int BlueeLoRa::begin(long frequency)
     writeRegister(REG_LNA, readRegister(REG_LNA) | 0x03);
     writeRegister(REG_MODEM_CONFIG_3, 0x04);
     setTxPower(17);
-    setupInterruptsCallback();
     idle(); 
+    setupInterruptsCallback();
     return 1;
 }
 
