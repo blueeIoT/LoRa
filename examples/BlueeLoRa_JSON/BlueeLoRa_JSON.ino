@@ -1,7 +1,8 @@
+#include <BlueeLoRa.h>
 #include <ArduinoJson.h>
-#include "BlueeLoRa.h"
 
 BlueeLoRa LoRa;     //Objeto LoRa
+int timeOut, count;
 
 void setup() {
     Serial.begin(9600);   

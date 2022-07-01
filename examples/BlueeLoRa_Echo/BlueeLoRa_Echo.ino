@@ -2,6 +2,7 @@
 
 BlueeLoRa LoRa;     //Objeto LoRa
 String message = "Hola desde LoRa!!!";
+int timeOut;
 
 void setup() {
     Serial.begin(9600);   
@@ -19,7 +20,7 @@ void loop() {
        timeOut = 0;
        LoRa.send(message);                  //Se envía el valor de un contador
        Serial.print("send: ");
-       Serial.println(count);
+       Serial.println(message);
     }
     delay(1);
 }

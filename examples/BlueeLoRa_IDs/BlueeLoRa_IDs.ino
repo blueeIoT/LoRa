@@ -1,7 +1,7 @@
 #include "BlueeLoRa.h"
 
 BlueeLoRa LoRa;             //Objeto LoRa
-
+int timeOut, count;
 byte sourceID = 0x10;       // Dirección del dispositivo
 byte destinationID = 0x11;  // Dirección del dispositivo de destino
 byte networkID = 0x01;      // Identificador de la red de destino
@@ -28,6 +28,6 @@ void loop() {
     delay(1);
 }
 
-void onReceive(int packetSize) {
-    Serial.println("Recibido: " + LoRa.getReceivedData());		//Recepción de datos en formato String
+void onReceive(int packetSize) {     
+    Serial.println("Recibido: " + LoRa.getReceivedData());    //Recepción de datos en formato String
 }

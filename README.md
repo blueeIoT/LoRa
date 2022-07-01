@@ -2,7 +2,7 @@
 
 Librería para Arduino
 ===========================================
-Descarga la librería y conecta tus proyectos a diversas plataformas en la nube con **bluee** .
+Descarga la librería y conecta tus proyectos a redes LoRa y a diversas plataformas en la nube con **bluee** .
 
 Visita http://wwww.bluee.com.mx para más información.
 
@@ -133,7 +133,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 ```
 - Lectura de datos como **String**:
 ``` C++
-    String values = data.getData();
+	String values = data.getData();
 ```
 - Lectura de datos como buffer de tipo **Byte**:
 ``` C++

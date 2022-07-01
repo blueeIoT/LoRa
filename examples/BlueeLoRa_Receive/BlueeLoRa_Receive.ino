@@ -1,4 +1,4 @@
-#include "BlueeLoRa.h"
+#include <BlueeLoRa.h>
 
 BlueeLoRa LoRa;     //Objeto LoRa
 
