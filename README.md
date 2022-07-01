@@ -34,7 +34,7 @@ Debes declarar la funcion para recibir los datos:
 
 - Función que se dispara al obtener datos de LoRa. *packetSize - cantidad de datos a recibidos*.
 ``` C++
-    void onReceive(int packetSize) {
+	void onReceive(int packetSize) {
 		...
 	}
 ````
@@ -96,7 +96,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 
 - Asigna datos tipo *String*:
 ``` C++
-    data.setData("hola");
+	data.setData("hola");
 ```
 - Asigna datos como *buffer* de tipo *byte*:
 ``` C++
@@ -127,9 +127,9 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 ```
 - Lectura de ID´s como **Int**:
 ``` C++
-    int networkID = data.getNetworkID();
-    int destinationID = data.getDestinationID();
-    int sourceID = data.getSourceID();
+	int networkID = data.getNetworkID();
+	int destinationID = data.getDestinationID();
+	int sourceID = data.getSourceID();
 ```
 - Lectura de datos como **String**:
 ``` C++
