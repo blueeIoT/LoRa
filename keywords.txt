@@ -1,14 +1,74 @@
 #######################################
-# Syntax Coloring Map For BlueeLora
+# Syntax Coloring Map For BlueeLoRa
 #######################################
 # Class
 #######################################
 
-BlueeLora				KEYWORD1
+BlueeLora			KEYWORD1
+BlueeLoRaProtocol		KEYWORD1
 
 #######################################
 # Methods and Functions
 #######################################	
-
+freeMem				KEYWORD2
+clear				KEYWORD2
+clearData			KEYWORD2
+setNetworkID			KEYWORD2
+setDestinationID		KEYWORD2
+setSourceID			KEYWORD2
+getNetworkID			KEYWORD2
+getDestinationID		KEYWORD2
+getSourceID			KEYWORD2
+setData				KEYWORD2
+setData				KEYWORD2
+addData				KEYWORD2
+getData				KEYWORD2
+getDataAsBuffer			KEYWORD2
+getDataSize			KEYWORD2
+getBuffer			KEYWORD2
+getDataOnBuffer			KEYWORD2
+get				KEYWORD2
 		
+begin				KEYWORD2
+end				KEYWORD2
+beginPacket			KEYWORD2
+endPacket			KEYWORD2
+parsePacket			KEYWORD2
+packetRssi			KEYWORD2
+packetSnr			KEYWORD2
+packetFrequencyError		KEYWORD2
+rssi				KEYWORD2
+write				KEYWORD2
+available			KEYWORD2
+read				KEYWORD2
+peek				KEYWORD2
+setValidateIDs			KEYWORD2
+onReceive			KEYWORD2
+receive				KEYWORD2
+idle				KEYWORD2
+sleep				KEYWORD2
+setTxPower			KEYWORD2
+setFrequency			KEYWORD2
+setSpreadingFactor		KEYWORD2
+setSignalBandwidth		KEYWORD2
+setCodingRate4			KEYWORD2
+setPreambleLength		KEYWORD2
+setSyncWord			KEYWORD2
+enableCrc			KEYWORD2
+disableCrc			KEYWORD2
+enableInvertIQ			KEYWORD2
+disableInvertIQ			KEYWORD2
+setOCP				KEYWORD2
+setGain				KEYWORD2
+send				KEYWORD2
+getReceived			KEYWORD2
+getReceivedData			KEYWORD2
+setIDs				KEYWORD2
+setPins				KEYWORD2
+setSPI				KEYWORD2
+setSPIFrequency			KEYWORD2
+
+#######################################
+# Constants
+#######################################
 

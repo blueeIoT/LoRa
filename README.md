@@ -1,4 +1,4 @@
-# Bluee Lora
+# Bluee LoRa
 
 Librería para Arduino
 ===========================================
@@ -6,7 +6,8 @@ Descarga la librería y conecta tus proyectos a diversas plataformas en la nube 
 
 Visita http://wwww.bluee.com.mx para más información.
 
-- Librería para *BlueeLora*
+- Librería para *BlueeLoRa*
+- Basada en la librería de Arduino [LoRa]
 
 # Inicialización
 
@@ -20,7 +21,7 @@ Define los pines de control e interrupción con el dispositivo LoRa dentro de la
 ````
 Define ID´s de control de red para enviar y recibir datos entre dispositivos LoRa dentro de la función **setup()**. *Utiliza 0xFF para enviar y recibir como broadcast*.
 ``` C++
-    LoRa.setIDs(network, destination, localId);
+    LoRa.setIDs(networkID, destinationID, sourceID);
 ````
 Adiciona el callback para leer datos provenientes de la red LoRa.
 ``` C++
@@ -46,15 +47,15 @@ Utiliza la función **LoRa.send()** para enviar datos por medio de LoRa. *El par
 
 ``` C++
 	void loop() {
-	    LoRa.send("Hola desde LoRa");
-	    ...
+		LoRa.send("Hola desde LoRa");
+		...
 	}
 ````
 
 # Recepción de datos
 Utiliza la función **LoRa.getReceivedData()** para recibir datos de LoRa. *Los datos se regresan en tipo de dato String.*
 ``` C++
-    void onReceive(int packetSize) {
+	void onReceive(int packetSize) {
 		Serial.println("Recibido: " + LoRa.getReceivedData());
 	}
 ````
@@ -75,7 +76,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 
 - La estructura de datos es:
 ``` C++
-    [0] -> networkID
+	[0] -> networkID
 	[1] -> destinationID
 	[2] -> sourceID
 	[3] -> size of payload (0 a 250 bytes máximo)
@@ -100,7 +101,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 - Asigna datos como *buffer* de tipo *byte*:
 ``` C++
 	byte values[] = {0x02, 0x03, 0x04};
-    data.setData(values, sizeof(values));
+	data.setData(values, sizeof(values));
 ```
 - Agrega valores tipo *byte*, uno por uno:
 ``` C++
@@ -122,7 +123,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 - Lectura de toda la trama de tipo **BlueeLoRaProtocol** en el callback de recepción de datos:
 ``` C++
 	BlueeLoRaProtocol data;
-    LoRa.getReceived(data);
+	LoRa.getReceived(data);
 ```
 - Lectura de ID´s como **Int**:
 ``` C++
@@ -138,9 +139,9 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 ``` C++
 	byte value = data.getDataOnBuffer(position);
 	...
-    for (int i = 0; i < data.getDataSize(); i++) {
-        Serial.print(data.getDataOnBuffer(i), HEX);       
-    }
+	for (int i = 0; i < data.getDataSize(); i++) {
+		Serial.print(data.getDataOnBuffer(i), HEX);       
+	}
 ```
 
 # Formato JSON
@@ -151,7 +152,7 @@ El traspaso de datos con las plataformas en la nube requieren sea en formato **J
 
 ## Agregar un JSON como valor de un parámetro:
 
-Utilizando la librería de *ArduinoJson*, crear un JSON:
+Utilizando la librería de [ArduinoJson], crear un JSON:
 ``` C++
 	String dataJson;  
 	StaticJsonDocument<200> doc;
@@ -160,7 +161,7 @@ Utilizando la librería de *ArduinoJson*, crear un JSON:
 ```
 JSON output:
 ``` C++
-    { "nameOfValue" : value }
+	{ "nameOfValue" : value }
 ```
 Agregar JSON como parámetro:
 ``` C++
@@ -177,3 +178,5 @@ Revisa la [documentación] de tu dispositivo BlueeLora para más información.
 [ArduinoJson]: <https://arduinojson.org/>
 
 [JSON]: <https://www.json.org/json-es.html>
+
+[LoRa] <https://github.com/sandeepmistry/arduino-LoRa>
