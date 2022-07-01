@@ -79,7 +79,7 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 	[0] -> networkID
 	[1] -> destinationID
 	[2] -> sourceID
-	[3] -> size of payload (0 a 250 bytes máximo)
+	[3] -> size of payload (250 bytes max)
 	[..] -> payload
 ```
 
@@ -87,9 +87,9 @@ El objeto *BlueeLoRaProtocol* permite definir los ID´s de envío y leer los ID�
 
 - Asigna ID´s: *Los ID´s deben ser de 1 byte (0 a 255).*
 ``` C++
-    data.setNetworkID(networkID);
-    data.setDestinationID(destinationID);
-    data.setSourceID(sourceID);
+	data.setNetworkID(networkID);
+	data.setDestinationID(destinationID);
+	data.setSourceID(sourceID);
 ```
 
 - Nota: **El valor 0xFF es definido como BroadcastID, por lo que todos escuchan si se envia como identificador de red o destino.**
@@ -179,4 +179,4 @@ Revisa la [documentación] de tu dispositivo BlueeLora para más información.
 
 [JSON]: <https://www.json.org/json-es.html>
 
-[LoRa] <https://github.com/sandeepmistry/arduino-LoRa>
+[LoRa]: <https://github.com/sandeepmistry/arduino-LoRa>
